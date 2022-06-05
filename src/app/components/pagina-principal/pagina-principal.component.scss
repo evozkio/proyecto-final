@@ -1,0 +1,246 @@
+.contenedor-principal {
+  padding-left: 230px;
+  background-color: var(--primero);
+  .inicio,
+  .conocimientos,
+  .proyectos,
+  .contacto{
+    padding: 0 5rem;
+  }
+  .inicio {
+    display: flex;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+
+
+  }
+
+  .conocimientos {
+    height: 100vh;
+    position: relative;
+    padding: 3rem;
+
+    .secciones {
+      position: relative;
+      padding: 3rem 0;
+      width: 100%;
+      .seccion {
+        position: absolute;
+        left: 0;
+        transition: all 0.5s;
+
+        .rotulo {
+          grid-area: rotulo;
+          text-transform: uppercase;
+          font-weight: 750;
+          font-size: xx-large;
+        }
+        .info {
+          padding: 1rem 0;
+          grid-area: info;
+          letter-spacing: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          font-size: 20px;
+          strong {
+            font-size: 24px;
+          }
+          span {
+            font-weight: 300;
+            font-size: 24px;
+            color: red;
+          }
+          .imagenes {
+            height: 300px;
+            width: 100%;
+            display: flex;
+            gap: 1rem;
+            div {
+              max-width: 400px;
+              width: 100%;
+              background-size: 100% auto;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+      .distribucion {
+        display: grid;
+        grid-template-areas: "rotulo " "info ";
+      }
+    }
+    .navegacion {
+      display: flex;
+      justify-content: space-around;
+      gap: 3rem;
+      border: 1px solid white;
+      div {
+        width: 100%;
+        cursor: pointer;
+        padding: 0.5rem 0;
+        padding-left: 0.5rem;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .seleccionado {
+        color: var(--primero);
+        background-color: white;
+      }
+    }
+  }
+
+  .proyectos {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 3rem;
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      .proyecto {
+        width: calc(33% - 2rem);
+        height: 300px;
+        background-color: var(--segundo);
+        border-radius: 10px;
+        .contenedor{
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 1s;
+          background-color: rgba(128, 128, 128, 0.616);
+          width: 100%;
+          height: 100%;
+          .ver {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s;
+            opacity: 0;
+            background-color: white;
+            height: 0;
+            width: 0;
+            border-radius: 50%;
+            p {
+              font-size: 15px;
+              text-transform: uppercase;
+              color: black;
+            }
+          }
+        }
+        &:hover {
+          .contenedor{
+            background-color: transparent;
+            .ver {
+             height: 100px;
+             width: 100px;
+             opacity: 1;
+           }
+          }
+        }
+      }
+    }
+  }
+
+  .contacto{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    .datos{
+      width: 1000px;
+      display: grid;
+      grid-template-areas: "nombre correo" "asuntos asuntos" "mensaje mensaje" "contactame contactame";
+      gap: 3rem;
+      input, textarea{
+        background-color: #2b2b2b;
+        border: none;
+        padding: 20px 20px;
+        font-size: 16px;
+      }
+      input{
+        height: 10px;
+
+      }
+      textarea{
+        width: 1000px;
+        height: 300px;
+
+      }
+      .nombre{
+        grid-area: nombre;
+      }
+      .correo{
+        grid-area: correo;
+      }
+      .asuntos{
+        grid-area: asuntos;
+      }
+      .mensaje{
+        grid-area: mensaje;
+        resize: none;
+      }
+      .contactame{
+        grid-area: contactame;
+        width: 200px;
+      }
+    }
+  }
+}
+
+app-navegador{
+  position: fixed;
+  height: 100%;
+  background-color: var(--segundo);
+}
+
+.noMostrar {
+  display: none;
+}
+
+.contactame {
+  position: relative;
+  left: 50px;
+  border: white 1px solid;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: transparent;
+  background: linear-gradient(to left, transparent 50%, #0003c7 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+  &:hover {
+    background-position: left;
+  }
+}
+
+.titulo {
+  font-size: 50px;
+  font-weight: 600;
+  .titulo-arriba {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    background: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s;
+    &:hover {
+      background-color: var(--azul);
+    }
+  }
+}
+

@@ -1,0 +1,85 @@
+.contenedor_Principal {
+    height: 100vh;
+    // background-color: red;
+    display: grid;
+    *{
+
+        color: black;
+    }
+    grid-template-rows: 40px 1fr 20px;
+    grid-template-columns: 300px auto;
+    grid-template-areas: "cabecera cabecera" "buscador datos" "pie pie";
+    overflow-y: hidden;
+    .contenedor_Cabecera {
+        grid-area: cabecera;
+    }
+    .contenedor_Buscador {
+        // background-color: blueviolet;
+        grid-area: buscador;
+        overflow-y: auto;
+        height: 100%;
+        padding: 20px;
+        .contenedor_inputBuscador {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            .text_buscador {
+                flex: 10;
+            }
+            .boton_buscador {
+                flex: 1;
+            }
+        }
+        .contenedor_resultado_buscador {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            button {
+                font-weight: bold;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                border-radius: 10px;
+            }
+        }
+    }
+    .contenedor_Datos {
+        // background-color: aquamarine;
+        grid-area: datos;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: auto;
+        padding-right: 10px;
+        .contenedor_Arriba {
+            padding-top: 20px;
+            // background-color: chartreuse;
+            flex: 6;
+            overflow: hidden;
+            .marca_logo {
+                height: 50px;
+            }
+            ul {
+                overflow-y: auto;
+            }
+            li {
+                font-size: 30px;
+                list-style: none;
+            }
+        }
+        .contenedor_Abajo {
+            // background-color: coral;
+            flex: 4;
+            overflow: auto;
+            padding: 20px;
+            .imagen_producto {
+                height: 90%;
+            }
+        }
+    }
+    .contenedor_Pie {
+        grid-area: pie;
+        // background-color: rgb(65, 65, 189);
+        line-height: 17px;
+    }
+}

@@ -1,0 +1,338 @@
+<div class="contenedor-general">
+  <app-navegador></app-navegador>
+  <div class="contenedor-principal">
+    <div class="inicio">
+      <div class="titulo">
+        <h1 class="titulo-arriba">Hola,</h1>
+        <h1>Soy Carlos</h1>
+        <h1>desarrollador junior</h1>
+      </div>
+      <button class="contactame">Contáctame</button>
+    </div>
+    <div class="conocimientos">
+      <div class="navegacion">
+        <div
+          (click)="actionMenu(0)"
+          [ngClass]="{ seleccionado: numero_seccion == 0 }"
+        >
+          PSEUDOCODIGO
+        </div>
+        <div
+          (click)="actionMenu(1)"
+          [ngClass]="{ seleccionado: numero_seccion == 1 }"
+        >
+          HTML/CSS/JAVASCRIPT
+        </div>
+        <div
+          (click)="actionMenu(2)"
+          [ngClass]="{ seleccionado: numero_seccion == 2 }"
+        >
+          JAVA
+        </div>
+        <div
+          (click)="actionMenu(3)"
+          [ngClass]="{ seleccionado: numero_seccion == 3 }"
+        >
+          PYTHON
+        </div>
+        <div
+          (click)="actionMenu(4)"
+          [ngClass]="{ seleccionado: numero_seccion == 4 }"
+        >
+          ANGULAR
+        </div>
+        <div
+          (click)="actionMenu(5)"
+          [ngClass]="{ seleccionado: numero_seccion == 5 }"
+        >
+          REACT NATIVE
+        </div>
+        <div
+          (click)="actionMenu(6)"
+          [ngClass]="{ seleccionado: numero_seccion == 6 }"
+        >
+          Base Datos
+        </div>
+      </div>
+      <div class="secciones">
+        <div
+          id="pseudocodigo"
+          class="seccion"
+          [ngClass]="numero_seccion != 0 ? 'noMostrar' : 'distribucion'"
+        >
+          <h2 class="rotulo">PSEUDOCODIGO</h2>
+          <div class="info">
+            <p>
+              <strong>
+                Es el lenguaje con el que normalmente empezamos y es el que
+                queremos dejar de lado mas rapido porque todos tenemos ansias de
+                escribir en el pc y ver las cosas visualizarse pero es el que
+                nos va acompañar siempre en este oficio ya lo escribamos o se
+                plante mentalmente cambiara dependiendo del paradigma que usemos
+                pero siempre estara ahí
+              </strong>
+            </p>
+            <h1>
+              <span>MAS IMPORTANTE</span>
+            </h1>
+          </div>
+        </div>
+        <div
+          id="html"
+          class="seccion"
+          [ngClass]="numero_seccion != 1 ? 'noMostrar' : 'distribucion'"
+        >
+          <h2 class="rotulo">HTML / CSS / JAVASCRIPT</h2>
+          <div class="info">
+            <p>
+              <strong>
+                Como introducion este fue mi primera entrada a la programacion
+                donde encontre lo que me gusta hacer que era crear por lineas de
+                codigo cosas que podia que despues podia mostrar.
+              </strong>
+              <br /><br />
+              Como es habitual empece con HTML que es agrupar y ubicar donde nos
+              interesa que se muestre lo que queremos y despues empece con CSS
+              donde pude aprender a dar estilo ha esa pagina para que se
+              acercara mas a como queria que se viera y por finalizar JAVASCRIPT
+              donde para mi encontre lo importante dado que no solo me daba
+              herramientras para modificar lo visual sino poder tratar una
+              informacion desde sumar 2 numeros hasta calcular el movimiento que
+              quieres que haga una animacion o incluso una informacion de una
+              base de datos y devolverlo al usuario
+              <br /><br />
+              <span>
+                Uno de mis primeros proyecto con este lenguaje fue con tres
+                compañeros
+                <a
+                  href="https://github.com/Mivali/Proyecto-Marcas"
+                  target="_blank"
+                  >GITHUB</a
+                >
+              </span>
+            </p>
+            <div class="imagenes">
+              <div
+                style="
+                  background-image: url(../../../assets/imagen/primera/primera.png);
+                "
+              ></div>
+              <div
+                style="
+                  background-image: url(../../../assets/imagen/primera/segunda.png);
+                "
+              ></div>
+              <div
+                style="
+                  background-image: url(../../../assets/imagen/primera/tercera.png);
+                "
+              ></div>
+              <div
+                style="
+                  background-image: url(../../../assets/imagen/primera/cuarta.png);
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="java"
+          class="seccion"
+          [ngClass]="numero_seccion != 2 ? 'noMostrar' : 'distribucion'"
+        >
+          <h2 class="rotulo">Java</h2>
+          <div class="info">
+            <p>
+              <strong>
+                Este fue el lenguaje donde aprendi la logica que habia detras de
+                los programas y donde aprendi que habia varios tipos de
+                paradigma en este caso el de orientado a objetos
+              </strong>
+              <br /><br />
+              Este lenguaje empece con lo tipico a sumar dos variables hasta
+              ahora que una de las ultimas cosas fue un Super Pang
+              <br /><br />
+              <span>
+                Una muestra y el
+                <a
+                  href="https://github.com/evozkio/TrabajoInterfaz"
+                  target="_blank"
+                  >GITHUB</a
+                >
+              </span>
+            </p>
+            <div class="imagenes">
+              <div
+                style="
+                  background-image: url(../../../assets/imagen/segundo/superpang.gif);
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="python"
+          class="seccion"
+          [ngClass]="numero_seccion != 3 ? 'noMostrar' : 'distribucion'"
+        >
+          <h2 class="rotulo">Python</h2>
+          <div class="info">
+            <p>
+              <strong>
+                Un lenguaje que desde mi punto de vista para una persona que
+                empieza es bastante amigable y que me atrajo dado que sabia que
+                con el se hacia la gran mayoria de la Inteligencia Artificial
+              </strong>
+              <br /><br />
+              Empece como en java haciendo algo de algoritmica basica para ver
+              como funcionaba las cosas y ver como mostraba los datos por
+              consola y como no uno de mis proyecto ultimos proyectos fue crear
+              un pequeño simulador de un juego que jugue en mi infancia que fue
+              POKEMON simulando esos combates y emepzar a descubrir que en la
+              informatica el termino aleatorio es mas un pseudoAleatorio dado
+              que yo tenga entendido es imposible hacer algo sea 100% alatorio
+              siempre esta relacionado a algo ya se la hora del dispositivo, los
+              click que haga eso si hacer que en apariencia sea aleatorio es lo
+              divertido
+              <br /><br />
+              <span>
+                Por desgracia el proyecto de pokemon que el queria mostar fue
+                perdido en el olvido
+              </span>
+            </p>
+          </div>
+        </div>
+        <div
+          id="angular"
+          class="seccion"
+          [ngClass]="numero_seccion != 4 ? 'noMostrar' : 'distribucion'"
+        >
+          <h2 class="rotulo">Angular</h2>
+          <div class="info">
+            <p>
+              <strong>
+                Un lenguaje que empece con mi primera empresa como desarrollador
+                en practicas
+              </strong>
+              <br /><br />
+              Es un framewaork para hacer diseños web en una sola pagina web y
+              la verdad de poder componetizar todo y hacer que se vea lo que a
+              mi me interesa fue una nueva manera de hacer paginas web
+              <br /><br />
+              <span>
+                Algunos de los proyectos que hice estan en el apartado de mis
+                proyectos donde pueden ver como quedaron y esta misma pagina
+                esta hecho con Angular
+              </span>
+            </p>
+          </div>
+        </div>
+        <div
+          id="react"
+          class="seccion"
+          [ngClass]="numero_seccion != 5 ? 'noMostrar' : 'distribucion'"
+        >
+          <h2 class="rotulo">React Native</h2>
+          <div class="info">
+            <p>
+              <strong>
+                Es un lenguaje interesante que me ha dado la posibilidad de
+                crear aplicaciones de movil con facilidad
+              </strong>
+              <br /><br />
+              Es un framewaork para hacer diseños web en una sola pagina web y
+              la verdad de poder componetizar todo y hacer que se vea lo que a
+              mi me interesa fue una nueva manera de hacer paginas web
+            </p>
+          </div>
+        </div>
+        <div
+          id="bbdd"
+          class="seccion"
+          [ngClass]="numero_seccion != 6 ? 'noMostrar' : 'distribucion'"
+        >
+          <h2 class="rotulo">Base de Datos</h2>
+          <div class="info">
+            <p>
+              <strong>
+                He usados varios tipos de bases de datos que son relacionales
+                con MySql y no relacionales con MongoDB
+              </strong>
+              <br /><br />
+              He aprendido hacer solicitudes de muchas maneras a la base de
+              datos y insertar datos de ellas principalmente en java con un
+              driver como union entre ellos
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="proyectos">
+      <div class="titulo">Mis Proyectos</div>
+      <p class="descripcion">
+        Esta es una pequeña galeria que elegido de mis proyectos recientes
+      </p>
+      <div class="galeria">
+        <div class="proyecto"  routerLink="/primer-proyecto" style=" background-image: url(../../../assets/imagen/proyectos/primera.png); ">
+          <div class="contenedor">
+            <div class="ver">
+              <p>Ver</p>
+              <p>Proyecto</p>
+            </div>
+          </div>
+        </div>
+        <div class="proyecto" style=" background-image: url(../../../assets/imagen/proyectos/primera.png); ">
+          <div class="contenedor">
+            <div class="ver">
+              <p>Ver</p>
+              <p>Proyecto</p>
+            </div>
+          </div>
+        </div>
+        <div class="proyecto" style=" background-image: url(../../../assets/imagen/proyectos/primera.png); ">
+          <div class="contenedor">
+            <div class="ver">
+              <p>Ver</p>
+              <p>Proyecto</p>
+            </div>
+          </div>
+        </div>
+        <div class="proyecto" style=" background-image: url(../../../assets/imagen/proyectos/primera.png); ">
+          <div class="contenedor">
+            <div class="ver">
+              <p>Ver</p>
+              <p>Proyecto</p>
+            </div>
+          </div>
+        </div>
+        <div class="proyecto" style=" background-image: url(../../../assets/imagen/proyectos/primera.png); ">
+          <div class="contenedor">
+            <div class="ver">
+              <p>Ver</p>
+              <p>Proyecto</p>
+            </div>
+          </div>
+        </div>
+        <div class="proyecto" style=" background-image: url(../../../assets/imagen/proyectos/primera.png); ">
+          <div class="contenedor">
+            <div class="ver">
+              <p>Ver</p>
+              <p>Proyecto</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="contacto">
+      <div class="titulo">Contactame</div>
+      <div class="datos">
+        <input type="text" name="" class="nombre" placeholder="NOMBRE" />
+        <input type="text" name="" class="correo" placeholder="CORREO" />
+        <input type="text" name="" class="asuntos" placeholder="ASUNTO" />
+        <textarea name="" class="mensaje" placeholder="MENSAJE"></textarea>
+        <button class="contactame">Contáctame</button>
+      </div>
+    </div>
+  </div>
+</div>

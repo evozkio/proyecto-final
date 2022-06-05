@@ -5,11 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './navegador.component.html',
   styleUrls: ['./navegador.component.scss']
 })
-export class NavegadorComponent implements OnInit {
+export class NavegadorComponent  {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  moverScroll(posicion:number){
+    let primer = document.getElementById('primer-elemento');
+    let alto = 0
+    if (primer){
+      alto = primer.offsetHeight;
+    }
+    window.scrollTo({
+      top: posicion*alto,
+      behavior: 'smooth',
+    })
   }
-
 }
